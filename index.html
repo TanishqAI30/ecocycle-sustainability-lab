@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart E-Waste Management & Sustainability Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <h1>EcoCycle: Smart E-Waste & Sustainability</h1>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#calculator">E-Waste Calculator</a>
+                <a href="#dropoff">Find Drop-off</a>
+                <a href="#analytics">Analytics</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Transforming Electronic Waste Management</h2>
+            <p>Empowering sustainable communities through smart tracking, recycling analytics, and responsible e-waste disposal.</p>
+            <a href="#calculator" class="btn">Calculate Your Impact</a>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="container main-grid">
+        
+        <!-- E-Waste Carbon & Impact Calculator Section -->
+        <section id="calculator" class="card">
+            <h3>♻️ E-Waste Carbon Footprint Calculator</h3>
+            <p>Estimate the environmental impact of discarding your old electronics.</p>
+            
+            <form id="eWasteForm">
+                <label for="deviceType">Select Device Type:</label>
+                <select id="deviceType" required>
+                    <option value="smartphone">Smartphone (Co2 equivalent: ~55 kg)</option>
+                    <option value="laptop">Laptop (Co2 equivalent: ~200 kg)</option>
+                    <option value="desktop">Desktop PC (Co2 equivalent: ~400 kg)</option>
+                    <option value="television">Television (Co2 equivalent: ~300 kg)</option>
+                </select>
+
+                <label for="deviceCount">Quantity:</label>
+                <input type="number" id="deviceCount" min="1" value="1" required>
+
+                <button type="submit" class="btn-submit">Analyze Impact</button>
+            </form>
+
+            <div id="resultBox" class="hidden">
+                <h4>Analysis Result:</h4>
+                <p id="outputText"></p>
+            </div>
+        </section>
+
+        <!-- Drop-off Finder Section -->
+        <section id="dropoff" class="card">
+            <h3>📍 E-Waste Collection Hubs</h3>
+            <p>Locate verified recycling centers near you to ensure safe disposal.</p>
+            <input type="text" id="citySearch" placeholder="Enter your city (e.g., Pune, Mumbai)...">
+            <button onclick="searchHubs()" class="btn-submit">Search Hubs</button>
+            <ul id="hubList">
+                <li><em>Enter a city to view nearby certified recycling stations.</em></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Analytics Dashboard Overview -->
+    <section id="analytics" class="container card full-width">
+        <h3>📊 Sustainability Analytics & Recovery Metrics</h3>
+        <div class="stats-container">
+            <div class="stat-box">
+                <h4>12,450 kg</h4>
+                <p>E-Waste Safely Recycled</p>
+            </div>
+            <div class="stat-box">
+                <h4>85%</h4>
+                <p>Material Recovery Rate</p>
+            </div>
+            <div class="stat-box">
+                <h4>3,200 tons</h4>
+                <p>CO2 Emissions Avoided</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Smart E-Waste Project Team | Project Based Learning</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
